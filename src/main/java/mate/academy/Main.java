@@ -65,7 +65,7 @@ public class Main {
         System.out.println(movieSessionService.findAvailableSessions(
                 fastAndFurious.getId(), LocalDate.now()));
 
-        UserService userService = (UserService) injector.getInstance(UserServiceImpl.class);
+        final UserService userService = (UserService) injector.getInstance(UserServiceImpl.class);
         ShoppingCartService shoppingCartService =
                 (ShoppingCartService) injector.getInstance(ShoppingCartServiceImpl.class);
         User bob = new User();
